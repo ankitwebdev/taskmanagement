@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Retrieve the list of tasks from the database
-function getTasks()
+function getTasks(): array
 {
     global $conn;
     $tasks = [];
@@ -31,7 +31,7 @@ function getTasks()
 }
 
 // Add a new task to the database
-function addTask($title)
+function addTask($title): void
 {
     global $conn;
 
@@ -41,7 +41,7 @@ function addTask($title)
 }
 
 // Mark a task as completed in the database
-function completeTask($taskId, $completed)
+function completeTask($taskId, $completed): void
 {
     global $conn;
 
